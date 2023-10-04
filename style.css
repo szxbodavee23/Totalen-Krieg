@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=KoHo:wght@300&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    font-family: "KoHo", 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+body {
+    background-image: url("pics/main_background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: bolder;
+    text-shadow: 5px 5px 10px black;
+    color: black;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-top: 1.5rem;
+    color: black;
+}
+
+p {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    padding: 0.4rem;
+    transition: all 0.3s linear;
+}
+
+a:hover {
+    background-color: gray;
+    border-radius: 25px;
+}
+
+.centered-div {
+    max-width: 50%;
+    min-width: 250px;
+    margin: auto;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#bevezetes {
+    background-color: black;
+    margin-top: 1.5rem;
+    border-radius: 25px;
+    box-shadow: 15px 15px 10px black;
+    padding: 1rem;
+}
+
+#tananyagok, #feladatok {
+    margin-top: 1.5rem;
+    background-color: black;
+    margin-top: 1.5rem;
+    border-radius: 25px;
+    box-shadow: 15px 15px 10px black;
+    padding: 1rem;
+}
+
+/* Media */
+@media screen and (max-width: 550px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    a~.navlink {
+        margin-top: 1.5rem;
+    }
+}
