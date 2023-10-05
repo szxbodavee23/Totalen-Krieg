@@ -107,6 +107,8 @@ a:hover {
     transform: scaleX(0);
     box-shadow: 0 5px 0 red;
     background: red;
+    box-shadow: 0 5px 0 lightgray;
+    background: lightblue;
     transform-origin: bottom right;
     transition: all 0.5s ease-out;
   }
