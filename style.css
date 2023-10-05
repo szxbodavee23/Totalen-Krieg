@@ -33,6 +33,7 @@ h2 {
     font-weight: bolder;
     margin-top: 1.5rem;
     color: black;
+    text-shadow: 5px 5px 10px black;
 }
 
 p {
