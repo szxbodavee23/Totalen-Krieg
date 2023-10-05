@@ -46,11 +46,6 @@ a {
     transition: all 0.3s linear;
 }
 
-a:hover {
-    background-color: gray;
-    border-radius: 25px;
-}
-
 .centered-div {
     max-width: 50%;
     min-width: 250px;
@@ -120,3 +115,8 @@ a:hover {
 .line:hover {
     color: whitesmoke;
 }   
+
+.navlink {
+    margin-bottom: -0.3rem;
+    color: white;
+}
