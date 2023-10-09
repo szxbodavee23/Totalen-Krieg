@@ -41,11 +41,15 @@ p {
 }
 
 a {
+    color: white;
     text-decoration: none;
     padding: 0.4rem;
     transition: all 0.3s linear;
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 580935cc453281db3a3232e056a7f4366e38bb07
 .centered-div {
     max-width: 50%;
     min-width: 250px;
@@ -78,10 +82,12 @@ a {
 /* Media */
 @media screen and (max-width: 550px) {
     .navbar {
+        color: white;
         flex-direction: column;
     }
 
     a~.navlink {
+        color: white;
         margin-top: 1.5rem;
     }
 }
@@ -115,8 +121,14 @@ a {
 .line:hover {
     color: whitesmoke;
 }   
+<<<<<<< HEAD
+.navlink{
+    color: white;
+}
+=======
 
 .navlink {
     margin-bottom: -0.3rem;
     color: white;
 }
+>>>>>>> 580935cc453281db3a3232e056a7f4366e38bb07
