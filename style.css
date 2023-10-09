@@ -46,6 +46,10 @@ a {
     padding: 0.4rem;
     transition: all 0.3s linear;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 580935cc453281db3a3232e056a7f4366e38bb07
 .centered-div {
     max-width: 50%;
     min-width: 250px;
@@ -102,6 +106,8 @@ a {
     bottom: -10px;
     left: -4px;
     transform: scaleX(0);
+    box-shadow: 0 5px 0 red;
+    background: red;
     box-shadow: 0 5px 0 lightgray;
     background: lightblue;
     transform-origin: bottom right;
@@ -115,6 +121,14 @@ a {
 .line:hover {
     color: whitesmoke;
 }   
+<<<<<<< HEAD
 .navlink{
     color: white;
 }
+=======
+
+.navlink {
+    margin-bottom: -0.3rem;
+    color: white;
+}
+>>>>>>> 580935cc453281db3a3232e056a7f4366e38bb07
