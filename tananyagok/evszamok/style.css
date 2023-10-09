@@ -10,3 +10,19 @@ body {
     background-size: cover;
     background-attachment: fixed;
 }
+
+ul {
+    background-color: black;
+    border-radius: 25px;
+    box-shadow: 15px 15px 10px black;
+    max-width: 50%;
+    min-width: 250px;
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+li {
+    padding: 1rem;
+    display: list-item;
+}
