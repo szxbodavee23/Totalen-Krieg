@@ -41,16 +41,11 @@ p {
 }
 
 a {
+    color: white;
     text-decoration: none;
     padding: 0.4rem;
     transition: all 0.3s linear;
 }
-
-a:hover {
-    background-color: gray;
-    border-radius: 25px;
-}
-
 .centered-div {
     max-width: 50%;
     min-width: 250px;
@@ -83,10 +78,12 @@ a:hover {
 /* Media */
 @media screen and (max-width: 550px) {
     .navbar {
+        color: white;
         flex-direction: column;
     }
 
     a~.navlink {
+        color: white;
         margin-top: 1.5rem;
     }
 }
@@ -118,3 +115,6 @@ a:hover {
 .line:hover {
     color: whitesmoke;
 }   
+.navlink{
+    color: white;
+}
