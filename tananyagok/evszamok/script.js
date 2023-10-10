@@ -35,7 +35,7 @@ lis.forEach(li => {
             "Németország elleni háborúba belépett Franciaország és Nagy-Britannia, amelyek azután, hogy Németország és a Szovjetunió elfoglalták a" +
             "lengyel területet, nem kötöttek békét, így a helyi háború előbb európaivá, azután pedig világháborúvá szélesedett. " +
             "Annak ellenére, hogy Lengyelország a Hitler-ellenes koalícióban, azaz a győztes oldalon állt, a világháború után nem szerezte vissza" + 
-            "teljes függetlenségét. Ahogyan a közép-európai államok többsége, úgy Lengyelország is a Szovjetunió fennhatósága alá került." + 
+            "teljes függetlenségét. Ahogyan a közép-európai államok többsége, úgy Lengyelország is a Szovjetunió fennhatósága alá került." + "<br>" +
             "<img src='../../pics/lengyel_hadjarat.jpg' style='margin-top: 2rem;'>"; // Itt a kep
 
             setDisplayPanelVisibility(true);
