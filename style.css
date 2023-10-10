@@ -110,7 +110,7 @@ a {
     transform-origin: bottom right;
     transition: all 0.5s ease-out;
   }
-  .line:hover:after {
+.line:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
