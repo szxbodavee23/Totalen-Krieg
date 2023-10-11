@@ -1,6 +1,7 @@
+echo Starting... Pushing to %2
 @echo off
 git add .
 git commit -m %1
-git push origin master
+git push origin %2
 @echo on
-echo Done.
+echo Batch ended
