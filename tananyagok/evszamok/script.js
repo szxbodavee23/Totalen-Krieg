@@ -10,40 +10,26 @@ const displayPanel = $(".display-panel");
 const cover = $(".cover");
 let displayPanelVisibility = false;
 
-const displayCover = (display) => {
-    if (display) {
-        cover.style = "display: block; position: absolute; top: 0%, left: 0%; width: 100%; height: 100%; background-color: rgba(0,0,0,0.77); z-index: -10;";
-        $("a[href='../../index.html'").style = "display: none";
-    }
-    else {
-        cover.style = "display: none;";
-        $("a[href='../../index.html'").style = "display: inline";
-    }
-}
-
 const setDisplayPanelVisibility = (visibility) => {
-    if (visibility) {
+    if (visibility && window.innerHeight >= 1080) {
         displayPanel.style = "display: block; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background-color: gray;" +
-            "padding: 1rem; border-radius: 25px;";
-
-            displayCover(true);
-            window.onscroll = () => {
-                window.scrollTo(0, 0);
-            }
+            "padding: 1rem; border-radius: 25px; box-shadow: 10px 10px 15px black;";
+        $(".link-back").style = "display: none";
+    }
+    else if (visibility && window.innerHeight < 1080) {
+        displayPanel.style = "display: block; position: absolute; left: 50%; top: 0%; transform: translate(-50%, 0%); background-color: gray;" +
+            "padding: 1rem; border-radius: 25px; box-shadow: 10px 10px 15px black;";
+        $(".link-back").style = "display: none";
     }
     else {
         displayPanel.style = "display: none;";
-        displayCover(false);
-        window.onscroll = () => {
-            window.scrollTo(window.pageYOffset, winow.pageXOffset);
-        }
+        $(".link-back").style = "display: inline";
     }
 
     displayPanelVisibility = visibility;
 }
 
 setDisplayPanelVisibility(false);
-displayCover(false);
 
 const closeButton = "<button type='button' onclick='setDisplayPanelVisibility(false)' style='position: absolute; top: 1%; right: 1%; transform: translate(-1%, -1%); background-color: rgba(0,0,0,0); color: crimson; border: none; font-size: 1.3rem;'>X</button><br>";
 
@@ -200,7 +186,7 @@ lis.forEach(li => {
                 "<img src='../../pics/thebulge.webp' style='margin-top: 2rem; width: 50%; min-width: 300px;'>";
             }
             else if (ihtml.startsWith("1945. április 30")) {
-                displayPanel.innerHTML = closeButton + "<p>" + 
+                displayPanel.innerHTML = closeButton + 
                 "<img src='../../pics/hitler.jpg' style='margin-top: 2rem; width: 50%; min-width: 300px;'>";
             }
             else if (ihtml.startsWith("1945. május 7-8.")) {
