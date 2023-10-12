@@ -41,7 +41,14 @@ h2 {
 img{
     width: 250px;
     height: 360px;
+    transition: 0.3s all linear;
+    border-radius: 25px;
 }
+
+img:hover {
+    box-shadow: 10px 1px 15px red;
+}
+
 table, h2{
     color:white;
 }

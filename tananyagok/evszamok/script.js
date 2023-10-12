@@ -27,10 +27,16 @@ const setDisplayPanelVisibility = (visibility) => {
             "padding: 1rem; border-radius: 25px;";
 
             displayCover(true);
+            window.onscroll = () => {
+                window.scrollTo(0, 0);
+            }
     }
     else {
         displayPanel.style = "display: none;";
         displayCover(false);
+        window.onscroll = () => {
+            window.scrollTo(window.pageYOffset, winow.pageXOffset);
+        }
     }
 
     displayPanelVisibility = visibility;
@@ -235,4 +241,3 @@ lis.forEach(li => {
         window.scrollTo(0, 0);
     });
 });
-
