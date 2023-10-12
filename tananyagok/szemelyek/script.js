@@ -10,12 +10,12 @@ const displayPanel = $(".display-panel");
 let displayPanelVisibility = false;
 
 const setDisplayPanelVisibility = (visibility) => {
-    if (visibility && window.innerHeight >= 1080) {
+    if (visibility && window.innerHeight >= 540) {
         displayPanel.style = "display: block; position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); background-color: gray;" +
             "padding: 1rem; border-radius: 25px; max-width: 50%; min-width: 350px;";
             $(".link-back").style = "display: none";
     }
-    else if (visibility && window.innerHeight < 1080) {
+    else if (visibility && window.innerHeight < 540) {
         displayPanel.style = "display: block; position: absolute; left: 50%; top: 0%; transform: translate(-50%, 0%); background-color: gray;" +
             "padding: 1rem; border-radius: 25px; max-width: 50%; min-width: 350px;";
             $(".link-back").style = "display: none";

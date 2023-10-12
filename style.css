@@ -48,7 +48,7 @@ a {
 }
 
 .centered-div {
-    max-width: 50%;
+    max-width: 35%;
     min-width: 250px;
     margin: auto;
 }

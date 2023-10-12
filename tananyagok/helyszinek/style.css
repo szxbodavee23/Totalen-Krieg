@@ -14,19 +14,45 @@ body {
     background-attachment: fixed;
     text-align: center;
 }
-.centered-div{
+
+ul {
+  list-style-type: none;
   background-color: black;
-  margin-top: 1.5rem;
   border-radius: 25px;
   box-shadow: 15px 15px 10px black;
+  max-width: 30%;
+  min-width: 250px;
+  margin: auto;
   padding: 1rem;
-}   
-li{
-  padding: 10px;
-  list-style: none;
+  text-align: center;
+  margin-bottom: 2rem;
+  z-index: -15;
+}
+
+li {
+  padding: 1rem;
+  max-width: 80%;
+  min-width: 250px;
+  margin: auto;
+  cursor: default;
+  transition: all 0.3s linear;
+  z-index: -15;
   cursor: pointer;
 }
-li:hover{
+
+li:hover {
   color: crimson;
-  transition: all ease-in-out 0.5s;
+  font-size: 1.05rem;
+}
+
+.display-panel p {
+  text-align: justify;
+}
+
+.display-panel {
+  text-align: center;
+}
+
+.content-name {
+  cursor: pointer;
 }
