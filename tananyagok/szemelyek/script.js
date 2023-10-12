@@ -10,8 +10,13 @@ const displayPanel = $(".display-panel");
 let displayPanelVisibility = false;
 
 const setDisplayPanelVisibility = (visibility) => {
-    if (visibility) {
+    if (visibility && window.innerHeight >= 1080) {
         displayPanel.style = "display: block; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background-color: gray;" +
+            "padding: 1rem; border-radius: 25px; max-width: 50%; min-width: 350px;";
+            $(".link-back").style = "display: none";
+    }
+    else if (visibility && window.innerHeight < 1080) {
+        displayPanel.style = "display: block; position: absolute; left: 50%; top: 0%; transform: translate(-50%, 0%); background-color: gray;" +
             "padding: 1rem; border-radius: 25px; max-width: 50%; min-width: 350px;";
             $(".link-back").style = "display: none";
     }
@@ -30,7 +35,9 @@ const closeButton = "<button type='button' onclick='setDisplayPanelVisibility(fa
 $("#szovetseges").addEventListener("click", () => {
     displayPanel.innerHTML = closeButton + 
     "<img src='../../pics/szovjet.jpg' style='max-width: 50%; height: auto; margin: 5px;'>" +
-    "<img src='../../pics/szovjet.jpg' style='max-width: 50%; height: auto; margin: 5px;'>";
+    "<img src='../../pics/britanniazaszlo.svg' style='max-width: 50%; height: auto; margin: 5px;'>" +
+    "<img src='../../pics/usazaszlo.svg' style='max-width: 50%; height: auto; margin: 5px;'>" + 
+    "<img src='../../pics/freefrancezaszlo.png' style='max-width: 50%; height: auto; margin: 5px;'>";
 
     setDisplayPanelVisibility(true);
 });
