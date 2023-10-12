@@ -32,7 +32,6 @@ h2 {
     font-size: 2rem;
     font-weight: bolder;
     margin-top: 1.5rem;
-    color: black;
     text-shadow: 5px 5px 10px black;
     text-align: center;
     margin-bottom: 1.5rem;
@@ -49,6 +48,17 @@ img:hover {
     box-shadow: 10px 1px 15px red;
 }
 
-table, h2{
-    color:white;
+table h2 {
+    color: white;
 }
+
+#szovetseges:hover{
+    color: crimson;
+    transition: all ease-in-out 0.5s;
+    
+}
+#tengely:hover{
+    color: lightblue;
+    transition: all ease-in-out 0.5s;
+}
+
