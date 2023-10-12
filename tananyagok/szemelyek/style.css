@@ -3,6 +3,10 @@
     padding: 0px;
 }
 
+p, figcaption {
+    cursor: default;
+}
+
 body {
     background-image: url("../../pics/optional_background2.png");
     background-position: center;
@@ -64,4 +68,21 @@ table h2 {
 #tengely:hover{
     color: lightblue;
     transition: all ease-in-out 0.5s;
+}
+
+figcaption {
+    transition: 0.3s all linear;
+}
+
+figcaption:hover {
+    text-shadow: 2px 2px 10px crimson;
+}
+
+.tengely:hover {
+    box-shadow: 10px 1px 15px lightblue;
+}
+
+.tengely-caption:hover {
+    text-shadow: 2px 2px 10px lightblue;
+    
 }

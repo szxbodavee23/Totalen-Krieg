@@ -13,7 +13,7 @@ body {
 
 
 ul {
-    list-style-type: disc;
+    list-style-type: none;
     background-color: black;
     border-radius: 25px;
     box-shadow: 15px 15px 10px black;
@@ -39,4 +39,12 @@ li {
 li:hover {
     color: crimson;
     font-size: 1.05rem;
+}
+
+.display-panel p {
+    text-align: justify;
+}
+
+.display-panel {
+    text-align: center;
 }
