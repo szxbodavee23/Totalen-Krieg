@@ -187,7 +187,7 @@ lis.forEach(li => {
             }
             else if (ihtml.startsWith("1945. április 30")) {
                 displayPanel.innerHTML = closeButton + 
-                "<img src='../../pics/hitler.jpg' style='margin-top: 2rem; width: 50%; min-width: 300px;'>";
+                "<img src='../../pics/hitler.jpg' style='margin-top: 2rem; width: 100%; min-width: 300px;'>";
             }
             else if (ihtml.startsWith("1945. május 7-8.")) {
                 displayPanel.innerHTML = closeButton + "<p>" + 
