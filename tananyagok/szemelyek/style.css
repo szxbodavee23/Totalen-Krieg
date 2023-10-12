@@ -51,13 +51,11 @@ img{
 table h2{
     color:white;
     transition: 0.3s all linear;
-}
-img:hover {
-    box-shadow: 10px 1px 15px red;
+    cursor: pointer;
 }
 
-table h2 {
-    color: white;
+img:hover {
+    box-shadow: 10px 1px 15px red;
 }
 
 #szovetseges:hover{
@@ -84,5 +82,12 @@ figcaption:hover {
 
 .tengely-caption:hover {
     text-shadow: 2px 2px 10px lightblue;
-    
+}
+
+.lightblue {
+    transition: 0.3s all linear;
+}
+
+.lightblue:hover {
+    box-shadow: 10px 10px 15px lightblue;
 }

@@ -11,7 +11,7 @@ let displayPanelVisibility = false;
 
 const setDisplayPanelVisibility = (visibility) => {
     if (visibility && window.innerHeight >= 1080) {
-        displayPanel.style = "display: block; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background-color: gray;" +
+        displayPanel.style = "display: block; position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); background-color: gray;" +
             "padding: 1rem; border-radius: 25px; max-width: 50%; min-width: 350px;";
             $(".link-back").style = "display: none";
     }
@@ -43,7 +43,11 @@ $("#szovetseges").addEventListener("click", () => {
 });
 
 $("#tengely").addEventListener("click", () => {
-    displayPanel.innerHTML = closeButton + "<p>" + "" + "</p>";
+    displayPanel.innerHTML = closeButton +
+    "<img src='../../pics/nemetzaszlo.png' style='max-width: 50%; height: auto; margin: 5px;' class='lightblue'>" +
+    "<img src='../../pics/japanzaszlo.png' style='max-width: 50%; height: auto; margin: 5px;' class='lightblue'>" +
+    "<img src='../../pics/olaszzaszlo.png' style='max-width: 50%; height: auto; margin: 5px;' class='lightblue'>" + 
+    "<img src='../../pics/magyarzaszlo.png' style='max-width: 50%; height: auto; margin: 5px;' class='lightblue'>";
     setDisplayPanelVisibility(true);
 });
 

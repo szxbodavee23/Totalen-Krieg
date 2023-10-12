@@ -124,6 +124,7 @@ a {
 .navlink {
     margin-bottom: -0.3rem;
     color: white;
+    cursor: pointer;
 }
 
 .link-back {
