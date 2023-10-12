@@ -117,11 +117,18 @@ a {
     color: whitesmoke;
 }   
 
+.navlink{
+    color: white;
+}
+
 .navlink {
     margin-bottom: -0.3rem;
     color: white;
 }
 
+HEAD
+
 .link-back {
     color: white;
 }
+
