@@ -10,6 +10,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
 }
+
 .line {
     color:  black;
     cursor: default;
@@ -40,3 +41,33 @@ body {
 .line:hover {
     color: whitesmoke;
 }   
+
+
+ul {
+    list-style-type: disc;
+    background-color: black;
+    border-radius: 25px;
+    box-shadow: 15px 15px 10px black;
+    max-width: 30%;
+    min-width: 250px;
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    z-index: -15;
+}
+
+li {
+    padding: 1rem;
+    max-width: 80%;
+    min-width: 250px;
+    margin: auto;
+    cursor: default;
+    transition: all 0.3s linear;
+    z-index: -15;
+}
+
+li:hover {
+    color: crimson;
+    font-size: 1.05rem;
+}

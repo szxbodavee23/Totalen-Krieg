@@ -103,14 +103,12 @@ a {
     bottom: -10px;
     left: -4px;
     transform: scaleX(0);
-    box-shadow: 0 5px 0 red;
-    background: red;
-    box-shadow: 0 5px 0 lightgray;
-    background: lightblue;
+    /* box-shadow: 0 5px 0 lightgray; */
+    background: white;
     transform-origin: bottom right;
     transition: all 0.5s ease-out;
   }
-  .line:hover:after {
+.line:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
@@ -118,11 +116,19 @@ a {
 .line:hover {
     color: whitesmoke;
 }   
+
 .navlink{
     color: white;
 }
+
 .navlink {
     margin-bottom: -0.3rem;
+    color: white;
+}
+
+HEAD
+
+.link-back {
     color: white;
 }
 
