@@ -1,0 +1,32 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    font-family: "KoHo", 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+body {
+    background-image: url("../../pics/optional_background2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+}
+.centered-div{
+  background-color: black;
+  margin-top: 1.5rem;
+  border-radius: 25px;
+  box-shadow: 15px 15px 10px black;
+  padding: 1rem;
+}   
+li{
+  padding: 10px;
+  list-style: none;
+  cursor: pointer;
+}
+li:hover{
+  color: crimson;
+  transition: all ease-in-out 0.5s;
+}
