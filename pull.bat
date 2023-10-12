@@ -1,5 +1,5 @@
-echo Pulling from %2
+echo Pulling from %1
 @echo off
-git add .
-git commit -m %1
-git pull origin %2
+git pull origin %1
+@echo on
+echo Done
