@@ -44,6 +44,10 @@ img{
     border-radius: 25px;
 }
 
+table h2{
+    color:white;
+    transition: 0.3s all linear;
+}
 img:hover {
     box-shadow: 10px 1px 15px red;
 }
@@ -61,4 +65,3 @@ table h2 {
     color: rgb(126, 207, 235);
     transition: all ease-in-out 0.5s;
 }
-
