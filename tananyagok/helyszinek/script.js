@@ -11,12 +11,12 @@ const cover = $(".cover");
 let displayPanelVisibility = false;
 
 const setDisplayPanelVisibility = (visibility) => {
-    if (visibility && window.innerHeight >= 540) {
+    if (visibility && window.innerHeight >= 1000) {
         displayPanel.style = "display: block; position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); background-color: gray;" +
             "padding: 1rem; border-radius: 25px; box-shadow: 10px 10px 15px black;";
         $(".link-back").style = "display: none";
     }
-    else if (visibility && window.innerHeight < 540) {
+    else if (visibility && window.innerHeight < 1000) {
         displayPanel.style = "display: block; position: absolute; left: 50%; top: 0%; transform: translate(-50%, 0%); background-color: gray;" +
             "padding: 1rem; border-radius: 25px; box-shadow: 10px 10px 15px black;";
         $(".link-back").style = "display: none";
