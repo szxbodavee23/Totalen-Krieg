@@ -23,31 +23,55 @@ const setDisplayPanelVisibility = (visibility) => {
             "padding: 1rem; border-radius: 25px; box-shadow: 10px 10px 15px black;";
         $(".link-back").style = "display: none";
     }
-    else {
+    else if (!visibility) { 
         displayPanel.style = "display: none;";
         $(".link-back").style = "display: inline";
-    }
 
-    displayPanelVisibility = visibility;
+        taskInputs.forEach(ti => {
+            ti.style = "background-color: white;"
+        });
+    }
+}
+
+const disableDisplayPanel = () => {
+    setDisplayPanelVisibility(false);
 }
 
 setDisplayPanelVisibility(false);
 
-const closeButton = "<button type='button' onclick='setDisplayPanelVisibility(false)' style='position: absolute; top: 1%; right: 3%; transform: translate(-1%, -1%); background-color: rgba(0,0,0,0); color: crimson; border: none; font-size: 1.3rem;'>X</button><br>";
+const closeButton = "<button type='button' onclick='setDisplayPanelVisibility(false)' style='position: absolute; top: 1%; right: 3%; transform: translate(-1%, -3%); background-color: rgba(0,0,0,0); color: crimson; border: none; font-size: 1.3rem;'>X</button><br>";
 
 const solutions = [1939, 1940, 1941, 1942, 1945, 1945];
 
 const evaluateTasks = () => {
-    setDisplayPanelVisibility(false);
-
     let points = 0;
 
     taskInputs.forEach((ti, ind) => {
-        if (ti.value == solutions[ind]) 
+        if (ti.value == solutions[ind]) {
             points++;
+            ti.style = "background-color: green; border-color: darkgreen";
+        }
+        else 
+        ti.style = "background-color: red; border-color: crimson;";
     });
 
-    displayPanel.innerHTML = closeButton + `Elért pontok száma: ${points}<br>Teljesítmény: ${Math.floor(points/6*100)}%`;
+    displayPanel.innerHTML = closeButton + `Elért pontok száma: ${points}/6<br>Teljesítmény: ${Math.floor(points/6*100)}%<br><br>`;
+
+    const a = document.createElement("a");
+    a.classList.add("navlink");
+    a.classList.add("line");
+    
+    if (points == 6) {
+        a.innerHTML = "Ugrás a következő tananyagra!";
+        a.href = "../../../tananyagok/helyszinek/helyszinek.html";
+    }
+    else {
+        a.innerHTML = "Vissza a tananyaghoz";
+        a.href = "../../../tananyagok/evszamok/evszamok.html";
+    }
+
+    displayPanel.appendChild(a);
+
     setDisplayPanelVisibility(true);
     window.scrollTo(0, 0);
 
@@ -58,9 +82,22 @@ btn.addEventListener("click", () => {
     taskInputs.forEach(ti => {if (ti.value == "") emptys++;});
 
     if (emptys > 0) {
-        displayPanel.innerHTML = closeButton + `${emptys} beviteli mező üresen maradt!<br>Szeretnéd így beküldeni?<br>` +
-        "<button style='background-color: rgba(0,0,0,0); color: white; border: none; margin-right: 1rem; cursor: pointer;' onclick='evaluateTasks()'>Igen</button>" +
-        "<button style='background-color: rgba(0,0,0,0); color: white; border: none; margin-left: 1rem; cursor: pointer;' onclick='setDisplayPanelVisibility(false)'>Nem</button>";
+        displayPanel.innerHTML = closeButton + `${emptys} beviteli mező üresen maradt!<br>Szeretnéd így beküldeni?<br>`;
+
+        const by = document.createElement("button");
+        by.innerHTML = "Igen";
+        by.id = "white-fg-button";
+        
+        const bn = document.createElement("button");
+        bn.innerHTML = "Nem";
+        bn.id = "white-fg-button";
+        
+        displayPanel.appendChild(by);
+        displayPanel.appendChild(bn);
+        
+        by.addEventListener("click", evaluateTasks);
+        bn.addEventListener("click", disableDisplayPanel);
+
         setDisplayPanelVisibility(true);
         window.scrollTo(0, 0);
     }

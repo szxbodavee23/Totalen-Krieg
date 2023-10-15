@@ -21,6 +21,7 @@ input{
     padding: 0.3rem;
     color: black;
     text-align: center;
+    outline: none;
 }
 .alairat{
     font-size: 0.9rem;

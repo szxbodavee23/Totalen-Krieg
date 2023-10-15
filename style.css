@@ -129,3 +129,23 @@ a {
 .link-back {
     color: white;
 }
+
+button {
+    background-color: rgba(0,0,0,0);
+    border: none;
+}
+
+#white-fg-button {
+    color: white;
+    cursor: pointer;
+    margin: 1rem;
+    transition: all linear 0.3s;
+}
+
+#white-fg-button:hover {
+    color: greenyellow;
+}
+
+#white-fg-button:last-child:hover {
+    color: crimson;
+}

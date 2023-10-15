@@ -218,8 +218,15 @@ lis.forEach(li => {
                 "Augusztus 15-én, hat nappal Nagaszaki bombázása után, és hét nappal a Szovjetunió hadüzenetének bejelentése után, " +
                 "Japán feltétel nélkül megadta magát a szövetséges erőknek. A megadási nyilatkozatot szeptember 2-án írták alá, <p style='display: inline; color: black; text-shadow: 2px 2px 15px crimson;'>ezzel "+
                 "hivatalosan is lezárva a második világháborút.</p> A bombázások szerepe a megadásban, és a felvetődő etikai, morális "+
-                "kérdések máig heves viták tárgyát képzik."+"</p>" + "<br>" +
-                "<img src='../../pics/japan_kapitulacio.jpg' style='margin-top: 2rem; width: 50%; min-width: 300px;'>";
+                "kérdések máig heves viták tárgyát képzik." + "</p>" + "<br>" +
+                "<img src='../../pics/japan_kapitulacio.jpg' style='margin-top: 2rem; width: 50%; min-width: 300px;'>" + "<br>";
+
+                const a = document.createElement("a");
+                a.innerHTML = "Ugrás a feladatokra!";
+                a.classList.add("line");
+                a.classList.add("navlink");
+                a.href = "../../../feladatok/evszamok/evszamok.html";
+                displayPanel.appendChild(a);
             }
         }
 
