@@ -10,6 +10,8 @@ const taskInputs = $all(".task-input");
 const btn = $("#ellenorzes");
 const displayPanel = $(".display-panel");
 
+let vis = false;
+
 taskInputs.forEach(ti => ti.value = "");
 
 const setDisplayPanelVisibility = (visibility) => {
@@ -31,6 +33,8 @@ const setDisplayPanelVisibility = (visibility) => {
             ti.style = "background-color: white;"
         });
     }
+
+    vis = visibility;
 }
 
 const disableDisplayPanel = () => {
@@ -104,6 +108,15 @@ btn.addEventListener("click", () => {
     else {
         evaluateTasks();
     }
+});
+
+
+taskInputs.forEach(ti => {
+    ti.addEventListener("click", () => {
+        if (vis) {
+            setDisplayPanelVisibility(false);
+        }
+    });
 });
 
 window.addEventListener("keyup", (e) => {if (e.key == "Escape") setDisplayPanelVisibility(false);});
