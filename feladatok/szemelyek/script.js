@@ -43,7 +43,7 @@ const disableDisplayPanel = () => {
 
 setDisplayPanelVisibility(false);
 
-const closeButton = "<button type='button' onclick='closeDisplayPanel' style='position: absolute; top: 1%; right: 3%; transform: translate(-1%, -3%); background-color: rgba(0,0,0,0); color: crimson; border: none; font-size: 1.3rem;'>X</button><br>";
+const closeButton = "<button type='button' onclick='disableDisplayPanel()' style='position: absolute; top: 1%; right: 3%; transform: translate(-1%, -3%); background-color: rgba(0,0,0,0); color: crimson; border: none; font-size: 1.3rem;'>X</button><br>";
 
 const solutions = ["adolf hitler", "heinrich himler", "horthy miklós", "dwight d. eisenhower", "winston churchill", "andrej andrejevics vlaszov"];
 
