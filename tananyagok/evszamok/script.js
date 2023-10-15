@@ -216,8 +216,8 @@ lis.forEach(li => {
             else if (ihtml.startsWith("1945. szeptember 2")) {
                 displayPanel.innerHTML = closeButton + "<p>" + 
                 "Augusztus 15-én, hat nappal Nagaszaki bombázása után, és hét nappal a Szovjetunió hadüzenetének bejelentése után, " +
-                "Japán feltétel nélkül megadta magát a szövetséges erőknek. A megadási nyilatkozatot szeptember 2-án írták alá, <p style='display: inline; color: black; text-shadow: 2px 2px 15px crimson;'>ezzel "+
-                "hivatalosan is lezárva a második világháborút.</p> A bombázások szerepe a megadásban, és a felvetődő etikai, morális "+
+                "Japán feltétel nélkül megadta magát a szövetséges erőknek. A megadási nyilatkozatot szeptember 2-án írták alá, <b style='color: black; text-shadow: 2px 2px 15px crimson;'>ezzel "+
+                "hivatalosan is lezárva a második világháborút.</b> A bombázások szerepe a megadásban, és a felvetődő etikai, morális "+
                 "kérdések máig heves viták tárgyát képzik." + "</p>" + "<br>" +
                 "<img src='../../pics/japan_kapitulacio.jpg' style='margin-top: 2rem; width: 50%; min-width: 300px;'>" + "<br>";
 
