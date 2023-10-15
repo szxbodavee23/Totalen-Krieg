@@ -57,7 +57,17 @@ lis.forEach((li, ind) => {
     li.addEventListener("click", () => {
         data.forEach((d, index) => {
             if (ind == index && !displayPanelVisibility) {
-                displayPanel.innerHTML = closeButton + "<p>" + Object.values(d)[0] + "</p>";
+                displayPanel.innerHTML = closeButton + "<p>" + Object.values(d)[0] + "</p><br><br>";
+
+                if (index == data.length-1) { 
+                    const a = document.createElement("a");
+                    a.innerHTML = "Ugrás a feladatokra!";
+                    a.classList.add("line");
+                    a.classList.add("navlink");
+                    a.href = "../../feladatok/helyszinek/helyszinek.html";
+                    displayPanel.appendChild(a);
+                }
+                
                 setDisplayPanelVisibility(true);
             }
         });

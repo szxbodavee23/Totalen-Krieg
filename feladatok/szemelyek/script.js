@@ -43,15 +43,15 @@ const disableDisplayPanel = () => {
 
 setDisplayPanelVisibility(false);
 
-const closeButton = "<button type='button' onclick='setDisplayPanelVisibility(false)' style='position: absolute; top: 1%; right: 3%; transform: translate(-1%, -3%); background-color: rgba(0,0,0,0); color: crimson; border: none; font-size: 1.3rem;'>X</button><br>";
+const closeButton = "<button type='button' onclick='closeDisplayPanel' style='position: absolute; top: 1%; right: 3%; transform: translate(-1%, -3%); background-color: rgba(0,0,0,0); color: crimson; border: none; font-size: 1.3rem;'>X</button><br>";
 
-const solutions = [1939, 1940, 1941, 1942, 1945, 1945];
+const solutions = ["adolf hitler", "heinrich himler", "horthy miklós", "dwight d. eisenhower", "winston churchill", "andrej andrejevics vlaszov"];
 
 const evaluateTasks = () => {
     let points = 0;
 
     taskInputs.forEach((ti, ind) => {
-        if (ti.value == solutions[ind]) {
+        if (ti.value.trim().toLowerCase() == solutions[ind]) {
             points++;
             ti.style = "background-color: green; border-color: darkgreen";
         }
@@ -67,12 +67,12 @@ const evaluateTasks = () => {
     
     if (points == 6) {
         a.innerHTML = "Ugrás a következő tananyagra!";
-        a.href = "../../tananyagok/szemelyek/szemelyek.html";
-        window.sessionStorage.setItem("ev", "kesz");
+        a.href = "../../tananyagok/helyszinek/helyszinek.html";
+        window.sessionStorage.setItem("szemely", "kesz");
     }
     else {
         a.innerHTML = "Vissza a tananyaghoz";
-        a.href = "../../tananyagok/evszamok/evszamok.html";
+        a.href = "../../tananyagok/szemelyek/szemelyek.html";
     }
 
     displayPanel.appendChild(a);

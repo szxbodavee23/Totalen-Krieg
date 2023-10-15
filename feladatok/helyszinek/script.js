@@ -11,6 +11,7 @@ const btn = $("#ellenorzes");
 const displayPanel = $(".display-panel");
 
 let vis = false;
+let success = false;
 
 taskInputs.forEach(ti => ti.value = "");
 
@@ -45,13 +46,13 @@ setDisplayPanelVisibility(false);
 
 const closeButton = "<button type='button' onclick='setDisplayPanelVisibility(false)' style='position: absolute; top: 1%; right: 3%; transform: translate(-1%, -3%); background-color: rgba(0,0,0,0); color: crimson; border: none; font-size: 1.3rem;'>X</button><br>";
 
-const solutions = [1939, 1940, 1941, 1942, 1945, 1945];
+const solutions = ["pearl harbor", "normandia", "leningrád", "sztálingrád", "berlin", "kurszk"];
 
 const evaluateTasks = () => {
     let points = 0;
 
     taskInputs.forEach((ti, ind) => {
-        if (ti.value == solutions[ind]) {
+        if (ti.value.trim().toLowerCase() == solutions[ind]) {
             points++;
             ti.style = "background-color: green; border-color: darkgreen";
         }
@@ -59,20 +60,26 @@ const evaluateTasks = () => {
         ti.style = "background-color: red; border-color: crimson;";
     });
 
-    displayPanel.innerHTML = closeButton + `Elért pontok száma: ${points}/6<br>Teljesítmény: ${Math.floor(points/6*100)}%<br><br>`;
-
+    
     const a = document.createElement("a");
     a.classList.add("navlink");
     a.classList.add("line");
     
-    if (points == 6) {
-        a.innerHTML = "Ugrás a következő tananyagra!";
-        a.href = "../../tananyagok/szemelyek/szemelyek.html";
-        window.sessionStorage.setItem("ev", "kesz");
+    if (points < 6) {
+        displayPanel.innerHTML = closeButton + `Elért pontok száma: ${points}/6<br>Teljesítmény: ${Math.floor(points/6*100)}%<br><br>`;
+        a.innerHTML = "Vissza a tananyaghoz";
+        a.href = "../../tananyagok/helyszinek/helyszinek.html";
     }
     else {
-        a.innerHTML = "Vissza a tananyaghoz";
-        a.href = "../../tananyagok/evszamok/evszamok.html";
+        displayPanel.innerHTML = `Elért pontok száma: ${points}/6<br>Teljesítmény: ${Math.floor(points/6*100)}%<br><br>`;
+        success = true;
+        a.innerHTML = "Vissza a főoldalra!";
+        if (window.sessionStorage.getItem("ev") == "kesz" && window.sessionStorage.getItem("szemely") == "kesz") {
+            a.href = "../../success.html";
+        }
+        else {
+            a.href = "../../index.html";
+        }
     }
 
     displayPanel.appendChild(a);
@@ -122,4 +129,6 @@ taskInputs.forEach(ti => {
     });
 });
 
-window.addEventListener("keyup", (e) => {if (e.key == "Escape") setDisplayPanelVisibility(false);});
+window.addEventListener("keyup", (e) => {
+    if (e.key == "Escape" && !success) setDisplayPanelVisibility(false);
+});

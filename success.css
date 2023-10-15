@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.display-panel h1 {
+    margin-bottom: 1rem;
+}
+
+.keszitok p {
+    text-align: center;
+    margin: 1rem;
+}
+
+h3 {
+    margin: 1rem;
+    color: black;
+    text-shadow: 5px 5px 10px black;
+}
+
+.kepek {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+img {
+    max-width: 100%;
+    min-width: 100px;
+    border-radius: 100%;
+    transition: all 0.3s linear;
+}
+
+img[src="pics/szurke.png"]:hover {
+    box-shadow: 10px 10px 15px #015C5D;
+}
+
+img[src="pics/szabo.png"]:hover {
+    box-shadow: 10px 10px 15px #B6C3B2;
+}
+
+img[src="pics/szanto.png"]:hover {
+    box-shadow: 10px 10px 15px #B9B3A3;
+}
+
+figure {
+    max-width: 20%;
+    min-width: 100px;
+}
+
+ul {
+    max-width: fit-content;
+    margin: auto;
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+
+
+@media screen and (max-width: 400px) {
+    .kepek {
+        flex-direction: column;
+    }
+}
