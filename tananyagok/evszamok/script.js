@@ -225,7 +225,7 @@ lis.forEach(li => {
                 a.innerHTML = "Ugrás a feladatokra!";
                 a.classList.add("line");
                 a.classList.add("navlink");
-                a.href = "../../../feladatok/evszamok/evszamok.html";
+                a.href = "../../feladatok/evszamok/evszamok.html";
                 displayPanel.appendChild(a);
             }
         }

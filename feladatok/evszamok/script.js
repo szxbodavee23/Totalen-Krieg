@@ -67,11 +67,11 @@ const evaluateTasks = () => {
     
     if (points == 6) {
         a.innerHTML = "Ugrás a következő tananyagra!";
-        a.href = "../../../tananyagok/helyszinek/helyszinek.html";
+        a.href = "../../tananyagok/helyszinek/helyszinek.html";
     }
     else {
         a.innerHTML = "Vissza a tananyaghoz";
-        a.href = "../../../tananyagok/evszamok/evszamok.html";
+        a.href = "../../tananyagok/evszamok/evszamok.html";
     }
 
     displayPanel.appendChild(a);
