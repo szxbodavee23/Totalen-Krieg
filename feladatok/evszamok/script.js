@@ -79,7 +79,6 @@ const evaluateTasks = () => {
 
     setDisplayPanelVisibility(true);
     window.scrollTo(0, 0);
-
 }
 
 btn.addEventListener("click", () => {

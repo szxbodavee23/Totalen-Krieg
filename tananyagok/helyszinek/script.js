@@ -66,6 +66,8 @@ lis.forEach((li, ind) => {
                     a.classList.add("navlink");
                     a.href = "../../feladatok/helyszinek/helyszinek.html";
                     displayPanel.appendChild(a);
+
+                    window.scrollTo(0, 0);
                 }
                 
                 setDisplayPanelVisibility(true);

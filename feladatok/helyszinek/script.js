@@ -74,6 +74,7 @@ const evaluateTasks = () => {
         displayPanel.innerHTML = `Elért pontok száma: ${points}/6<br>Teljesítmény: ${Math.floor(points/6*100)}%<br><br>`;
         success = true;
         a.innerHTML = "Vissza a főoldalra!";
+
         if (window.sessionStorage.getItem("ev") == "kesz" && window.sessionStorage.getItem("szemely") == "kesz") {
             a.href = "../../success.html";
         }
